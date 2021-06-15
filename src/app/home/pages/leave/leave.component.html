@@ -1,0 +1,87 @@
+<div class="leave_page">
+    <div class="leave_page_header">
+        <div class="back">
+            <span class="back_arrow" routerLink="/remotestate/login/screen">
+                <img src="../../../../assets/img_leave/Icon ionic-arrow-round-back.svg" alt="back">
+            </span>
+            <span class="leave_app">Leave Application</span>
+        </div>
+        <div class="not_log_button">
+            <button class="not_button" type="button">
+                <img src="../../../../assets/img_leave/notification icon.svg" alt="notification" width="16px" height="20px">
+            </button>
+            <button class="log_button" type="button" routerLink="/remotestate/login">
+                <img src="../../../../assets/img_leave/logout.svg" alt="logout" width="21px" height="21px">
+            </button>
+        </div>
+    </div>
+    <div class="leave_data">
+        <div class="sick_leave">
+            <div class="icon_text">
+                <img class="img" src="../../../../assets/img_leave/apply_leave/sneeze.svg" alt="sneeze icon" width="39px" height="43px">
+                <span class="text">Sick Leave</span>
+            </div>
+            <div class="date">
+                <span>{{used_leave[0]}}</span><span class="small">/{{allowed_leave[0]}}</span>
+            </div>
+        </div>
+        <div class="casual_leave">
+            <div class="icon_text">
+                <img class="img" src="../../../../assets/img_leave/apply_leave/sunbed.svg" alt="Casual icon" width="39px" height="43px">
+                <span class="text">Casual Leave</span>
+            </div>
+            <div class="date">
+                <span>{{used_leave[1]}}</span><span class="small">/{{allowed_leave[1]}}</span>
+            </div>
+        </div>
+        <div class="annual_leave">
+            <div class="icon_text">
+                <img class="img" src="../../../../assets/img_leave/apply_leave/annual.svg" alt="annual icon" width="39px" height="43px">
+                <span class="text">Annual Leave</span>
+            </div>
+            <div class="date">
+                <span>{{used_leave[2]}}</span><span class="small">/{{allowed_leave[2]}}</span>
+            </div>
+        </div>
+    </div>
+    <div class="apply_button">
+        <button class="button" type="button" routerLink="/remotestate/leave/apply">Apply Leave</button>
+    </div>
+    <div *ngIf='(disapear_0_leave_body)' class="recent">
+        <span>Recent Leave History</span>
+    </div>
+    <div *ngIf='(!disapear_0_leave_body)' class="recent">
+        <span>No Recent Leave History</span>
+    </div>
+
+    <div *ngFor="let data of leave_id;index as i;">
+        <div class="leave_write_two">
+            <div class="write_header">
+                <div class="date">
+                    <img src="../../../../assets/img_leave/apply_leave/Icon awesome-calendar-alt.svg" alt="celender" width="24px" height="28px">
+                    <span class="write_date">{{fromdate[i]}}</span>
+                </div>
+                <span>To</span>
+                <div class="date">
+                    <img src="../../../../assets/img_leave/apply_leave/Icon awesome-calendar-alt.svg" alt="celender" width="24px" height="28px">
+                    <span class="write_date">{{todate[i]}}</span>
+                </div>
+                <button class="edit_leave" type="button" (click)="addedit_box(i)">
+                    <img src="../../../../assets/img_leave/apply_leave/Icon material-edit.svg" alt="edit" width="19px" height="19px">
+                </button>
+            </div>
+            <div class="write_body">
+                <span class="reason">{{reson_array[i]}}</span>
+            </div>
+            <div *ngIf=editbox_style[i] class="edit_leave_body">
+                <div class="close_leave">
+                    <button class="close_leave_but" type="button" (click)="removeedit_box()">
+                        <img src="../../../../assets/img_leave/Icon ionic-ios-close-circle-outline.svg" alt="close Leave" width="17px" height="17px">
+                    </button>
+                </div>
+                <img (click)="modify_leave(data)" class="modify" src="../../../../assets/img_leave/Modify Leave.svg" alt="modify leave" width="89px" height="17px">
+                <img (click)="remove_leave(data)" class="cancle" src="../../../../assets/img_leave/Cancle Leave.svg" alt="cancle leave" width="87px" height="17px">
+            </div>
+        </div>
+    </div>
+</div>

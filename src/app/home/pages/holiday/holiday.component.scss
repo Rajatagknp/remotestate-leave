@@ -1,0 +1,83 @@
+.holiday_page_header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #307FE2;
+    font: normal normal 900 16px/26px Lato;
+    letter-spacing: 0.72px;
+    color: #FFFFFF;
+    .back{
+        padding: 18px 0px 18px 14px;
+        display: flex;
+        flex-direction: row;
+        .leave_app{
+            padding-left: 21.76px;
+        }
+    }
+    .not_log_button{
+        padding: 18px 16px 15.9px 0px;
+        .not_button,.log_button{
+            background-color: #307FE2;
+            border: 0ch;
+        }
+        .not_button{
+            margin-right: 30.35px;
+        }
+    }
+}
+
+.holiday_page{
+    opacity: 1;
+    .holi_body_one{
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+        .holiday_body_img{
+            width: 345px;
+            height: 160px;
+            background: transparent url('../../../../assets/img_leave/pexels-julius-silver-753626.png') 0% 0% no-repeat padding-box;
+            @media only screen and (min-width: 690px+40px){
+                width: 345px*2;
+                height: 160px*2;
+                background: transparent url('../../../../assets/img_leave/pexels-julius-silver-753626@2x.png') 0% 0% no-repeat padding-box;
+            }
+        }
+    }
+    .holi_body_two{
+        margin: 0px 15px 0px 15px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: #307FE2;
+        margin-top: 27px;
+        font: normal normal normal 18px/36px Lato;
+        letter-spacing: 0.81px;
+        color: #FFFFFF;
+        .ver_line{
+            margin: 7.5px 0px 10.5px 0px;
+            width: 0px;
+            height: 32px;
+            border: 1px solid #F5F9FF;
+        }
+    }
+    .holi_body_three{
+        margin: 0px 15px 0px 15px;
+        background-color: #F5F9FF;
+        padding-top: 10px;
+        .holi_name_date{
+            margin-top: 10.5px;
+            display: flex;
+            justify-content:space-around;
+            font: normal normal normal 14px/14px Lato;
+            letter-spacing: 0.63px;
+            color: #6C6C6C;
+        }
+        .down_line{
+            margin: 8.5px 26.5px 0px 17.5px;
+            width: calc(100vw - 15px*2 - 26.5px - 17.5px);
+            height: 0px;
+            border: 1px solid #307FE2;
+            opacity: 0.2;
+        }
+    }
+}

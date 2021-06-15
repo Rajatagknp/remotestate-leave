@@ -1,0 +1,97 @@
+<div class="leaveapply_page">
+    <div class="leaveapply_page_header">
+        <div class="back">
+            <span class="back_arrow" routerLink="/remotestate/login/screen">
+                <img (click)="delete_modification()" src="../../../../assets/img_leave/Icon ionic-arrow-round-back.svg" alt="back">
+            </span>
+            <span class="leave_app">Leave Application</span>
+        </div>
+        <div class="not_log_button">
+            <button class="not_button" type="button">
+                <img src="../../../../assets/img_leave/notification icon.svg" alt="notification" width="16px" height="20px">
+            </button>
+            <button class="log_button" type="button" routerLink="/remotestate/login">
+                <img src="../../../../assets/img_leave/logout.svg" alt="logout" width="21px" height="21px">
+            </button>
+        </div>
+    </div>
+    <div class="leaveapply_page_body">
+        <div class="date">
+            <div class="date_text">
+                Form Date : 
+            </div>
+            <div class="date_date">
+                <mat-form-field class="cel_text" style="height:46px; width: calc(100vw - 220px);">
+                    <input #from_date matInput [min]="from_mindate" [max]="from_maxdate" [matDatepicker]="picker1" [value]="leavefrom_date" readonly>
+                    <mat-datepicker-toggle matSuffix [for]="picker1">
+                        <mat-icon matDatepickerToggleIcon><img style="padding-bottom: 5px;" src="../../../../assets/img_leave/Icon awesome-calendar-alt.svg" alt="celender"></mat-icon>
+                    </mat-datepicker-toggle>
+                    <mat-datepicker #picker1 color="primary"></mat-datepicker>
+                </mat-form-field>
+                <div *ngIf="formdate_style" class="style_date">
+                    select Date!
+                </div>
+            </div>
+        </div>
+        <div class="date">
+            <div class="date_text">
+                To Date :
+            </div>
+            <div class="date_date">
+                <mat-form-field class="cel_text" style="height:46px; width: calc(100vw - 220px);">
+                    <input #to_date matInput [min]="to_mindate" [matDatepicker]="picker2" [value]="leaveto_date" readonly>
+                    <mat-datepicker-toggle matSuffix [for]="picker2">
+                        <mat-icon matDatepickerToggleIcon><img style="padding-bottom: 5px;" src="../../../../assets/img_leave/Icon awesome-calendar-alt.svg" alt="celender"></mat-icon>
+                    </mat-datepicker-toggle>
+                    <mat-datepicker #picker2 color="primary"></mat-datepicker>
+                </mat-form-field>
+                <div *ngIf="todate_style" class="style_date">
+                    select Date!
+                </div>
+            </div>
+        </div>
+        <div class="date">
+            <div class="date_text">
+                Leave type :
+            </div>
+            <div class="date_date">
+                <select #leave_type class="cel_text" style="margin-top: 15px; margin-bottom: 15px;">
+                    <option *ngIf="(!selectedValue[0])" value="select">Select</option>
+                    <option *ngIf="selectedValue[0]" value="select" selected>Select</option>
+                    <option *ngIf="(!selectedValue[1])" value="sick">Sick Leave</option>
+                    <option *ngIf="selectedValue[1]" value="sick" selected>Sick Leave</option>
+                    <option *ngIf="(!selectedValue[2])" value="casual">Casual Leave</option>
+                    <option *ngIf="selectedValue[2]" value="casual" selected>Casual Leave</option>
+                    <option *ngIf="(!selectedValue[3])" value="other">Others</option>
+                    <option *ngIf="selectedValue[3]" value="other" selected>Others</option>
+                </select>
+                <div *ngIf="leave_type_style" class="style_date">
+                    select Leave Type!
+                </div>
+            </div>
+        </div>
+        <div class="date">
+            <div class="date_text">
+                Total Days :
+            </div>
+            <div class="date_date">
+                <span class="cel_text" style="margin-top: 15px; margin-bottom: 15px;">
+                    {{total_days(from_date.value,to_date.value)}}
+                </span>
+            </div>
+        </div>
+        <div class="date_reson">
+            <div class="date_text">
+                Reason :
+            </div>
+            <div class="date_date">
+                <span class="cel_text" contenteditable style="margin-top: 15px; margin-bottom: 15px;">
+                    <p id="myParagraph" style="line-height: 1.6;min-height: 160px;">{{reason_text_value}}</p>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="leaveapply_page_footer">
+        <button (click)="console_data(from_date.value,to_date.value,leave_type.value)" class="sub_button" type="button" [routerLink]='router_link'>Submit</button>
+    </div>
+</div>

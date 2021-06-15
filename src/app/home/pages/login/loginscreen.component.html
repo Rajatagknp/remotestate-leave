@@ -1,0 +1,126 @@
+<div class="login_screen">
+    <div class="header">
+        <div class="remote_logo">
+            <img src="../../../../assets/img_leave/RS logo top.svg" alt="Remotestate Logo" width="142px" height="19px">
+        </div>
+        <div class="logo">
+            <div class="notification">
+                <img src="../../../../assets/img_leave/notification icon.svg" alt="notification" width="16px" height="20px">
+            </div>
+            <div class="logout" type="button">
+                <img (click)='logout()' routerLink="/remotestate/login" src="../../../../assets/img_leave/logout.svg" alt="notification" width="21px" height="21px">
+            </div>
+        </div>
+    </div>
+    <div class="body_one">
+        <div class="name_text">
+            <div class="name_box_one">
+                <div class="name">Hi, {{name}}</div>
+                <div *ngIf='(!edit_dashboard)' class="designation">{{desvalue}}</div>
+                <div *ngIf='(edit_dashboard)' id="des_text" class="designation" style="border: 1px solid burlywood;border-radius: 10px;font: 17px;outline: 0ch;" contenteditable>{{desvalue}}</div>
+                <div class="phone_num">
+                    <img class="img" src="../../../../assets/img_leave/Call icon.svg" alt="call Icon" width="16px" height="16px">
+                    <div *ngIf='(!edit_dashboard)'>{{phonevalue}}</div>
+                    <div *ngIf='(edit_dashboard)' id="phone_no" style="border: 1px solid burlywood; min-width: 30px;border-radius: 10px;font: 17px;outline: 0ch;" contenteditable>{{phonevalue}}</div>
+                </div>
+            </div>
+            <div class="name_box_two">
+                <img style="border-radius: 50%;" [src]='photourl' alt="user image" width="74px" height="74px">
+            </div>
+        </div>
+        <div class="mail_ser">
+            <div class="mail_id">
+                <img class="img" src="../../../../assets/img_leave/mail icon.svg" alt="mail Icon" width="17px" height="12px">
+                <div>{{email}}</div>
+            </div>
+            <div *ngIf='(edit_dashboard)' (click)="edit_containt()">save</div>
+            <img *ngIf='(!edit_dashboard)' (click)="edit_containt()" class="edit_icon" src="../../../../assets/img_leave/edit icon.svg" alt="edit Name" width="35px" height="35px">
+        </div>
+    </div>
+    <div class="body_two">
+        <img class="img" src="../../../../assets/img_leave/Covid Image.svg" alt="Social diatancing" width="136px" height="66px">
+        <div class="text">
+            Follow Social Distancing & Fight against <span style="color: #307FE2;">COVID-19</span>
+        </div>
+    </div>
+    <div class="body_three">
+        <div class="text">
+            <div class="logo">
+                <img src="../../../../assets/img_leave/sneeze.svg" width="20px" height="23px">
+                <img class="logo0" src="../../../../assets/img_leave/sunbed.svg" width="19px" height="20px">
+                <img src="../../../../assets/img_leave/annual.svg" width="22px" height="22px">
+            </div>
+            <div class="logo_text">
+                <div class="logo1">Sick Leave</div>
+                <div class="logo1">Casual Leave</div>
+                <div class="logo1">Annual Leave</div>
+            </div>
+            <div class="logo_date">
+                <div class="logo2">{{used_leave[0]}}<span class="small">/{{allowed_leave[0]}}</span></div>
+                <div class="logo2">{{used_leave[1]}}<span class="small">/{{allowed_leave[1]}}</span></div>
+                <div class="logo2">{{used_leave[2]}}<span class="small">/{{allowed_leave[2]}}</span></div>
+            </div>
+        </div>
+        <div class="img">
+            <img class="leave_img" src="../../../../assets/img_leave/Leave Illustrator.svg" alt="Illustrate Leaves" width="97px" height="76px">
+            <div class="leave_text"  routerLink="/remotestate/leave">
+                Leaves
+            </div>
+        </div>
+    </div>
+    <div class="body_four">
+        <div class="text">
+            <div *ngIf=true>
+                <div class="four_header">
+                    <img src="../../../../assets/img_leave/Calendar.svg" alt="celender" width="17px" height="20px">
+                    <div class="date">{{standup_date}}</div>
+                </div>
+                <div style="max-height: 80px;overflow-y:scroll;">
+                    <div class="four_body">
+                        <div class="hor_line"></div>
+                        <span class="text">
+                            What I did yesterday?
+                            <div *ngFor="let ii of standup_yes">
+                                <div class="text_body">
+                                    <div class="black_dot"></div>
+                                    <span>{{ii}}</span>
+                                </div>
+                            </div>
+                        </span>
+                    </div>
+                    <div class="four_body">
+                        <div class="hor_line"></div>
+                        <span class="text">
+                            What will I do today?
+                            <div *ngFor="let ii of standup_today">
+                                <div class="text_body">
+                                    <div class="black_dot"></div>
+                                    <span>{{ii}}</span>
+                                </div>
+                            </div>
+                        </span>
+                    </div>
+                    <div class="four_body">
+                        <div class="hor_line"></div>
+                        <span class="text">
+                            Obstacles?
+                            <div class="text_body">
+                                <div class="black_dot"></div>
+                                <span>None</span>
+                            </div>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="four_img">
+            <img src="../../../../assets/img_leave/Standup Illustrator.svg" alt="Standup Illustraition" width="83px" height="81px">
+            <div class="standup" routerLink="/remotestate/standup">Standup</div>
+        </div>
+    </div>
+    <div class="body_five">
+        <span class="five_text">Holidays Calender</span>
+        <img routerLink="/remotestate/holiday" class="five_img" src="../../../../assets/img_leave/Icon awesome-calendar-alt.svg" alt="celender" width="24px" height="27px">
+    </div>
+    <!-- <div class="background_img"></div> -->
+</div>

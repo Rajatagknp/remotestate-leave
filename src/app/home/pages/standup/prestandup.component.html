@@ -1,0 +1,75 @@
+<div class="prestandup_page">
+    <div class="standup_page_header">
+        <div class="back">
+            <span class="back_arrow" routerLink="/remotestate/login/screen">
+                <img back_arrow src="../../../../assets/img_leave/Icon ionic-arrow-round-back.svg" alt="back">
+            </span>
+            <span class="leave_app">Previous Standups</span>
+        </div>
+        <div class="not_log_button">
+            <button class="not_button" type="button">
+                <img src="../../../../assets/img_leave/notification icon.svg" alt="notification" width="16px" height="20px">
+            </button>
+            <button class="log_button" type="button" routerLink="/remotestate/login">
+                <img src="../../../../assets/img_leave/logout.svg" alt="logout" width="21px" height="21px">
+            </button>
+        </div>
+    </div>
+    <div class="prestandup_header">
+        <div class="prestandup_header_text">
+            Last five Standups
+        </div>
+        <img class="prestandup_header_img" src="../../../../assets/img_leave/Icon awesome-calendar-alt.svg" alt="celender" width="22px" height="25px">
+    </div>
+    <div *ngFor='let id of standup_id; index as id_index;'>
+        <div class="prestandup_body_one" [style]=body_one_height[id_index]>
+            <div class="prestandup_body_header">
+                <div class="body_header">
+                    <img class="body_header_cel" src="../../../../assets/img_leave/Calendar.svg" width="17px" height="20px">
+                    <div class="body_header_text">{{standup_date[id_index]}}</div>
+                </div>
+                <img (click)="modify_standup(id)" class="body_header_edit" src="../../../../assets/img_leave/Edit 2 icon.svg" width="19px" height="19px">
+            </div>
+            <div class="boby_body">
+                <div class="did_yes">
+                    <div class="head">
+                        <div class="hori_line"></div>
+                        <div class="head_text">What I did yesterday?</div>
+                        <span class="show_more">
+                            <span *ngIf=change_show_text (click)="show_more(id_index)">Show...</span>
+                            <span *ngIf=(!change_show_text) (click)="show_less(id_index)">Show...</span>
+                        </span>
+                    </div>
+                    <div *ngFor='let ii of standup_id_yes[id_index]'>
+                        <div class="body_one">
+                            <div class="round_point"></div>
+                            <span class="body_text">{{ii}}</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="did_yes">
+                    <div class="head">
+                        <div class="hori_line"></div>
+                        <div class="head_text">What will I do today?</div>
+                    </div>
+                    <div *ngFor='let ii of standup_id_today[id_index]'>
+                        <div class="body_one">
+                            <div class="round_point"></div>
+                            <div class="body_text">{{ii}}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="did_yes">
+                    <div class="head">
+                        <div class="hori_line"></div>
+                        <div class="head_text">Obstacles?</div>
+                    </div>
+                    <div class="body_one">
+                        <div class="round_point"></div>
+                        <div class="body_text">None</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

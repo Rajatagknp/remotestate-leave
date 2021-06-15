@@ -1,0 +1,31 @@
+<div class="login_page">
+    <div class="login_img">
+        <img class="login_img_2" src="../../../../assets/img_leave/login screen image.svg">
+        <img class="login_img_1" src="../../../../assets/img_leave/loginpath.svg">
+    </div>
+    <div class="login_body">
+        <input class="loginid" type="text" placeholder="Login Id" #logid [value]="socialUser.name">
+        <div class="required" [style]=log_id_required_style>Login Id is requerid!</div>
+        <input class="password" type="password" placeholder="Password" #password [value]="socialUser.email">
+        <div *ngIf=(!wrongpassword) class="required" [style]=password_required_style>Password is requerid!</div>
+        <div *ngIf=wrongpassword class="required">{{failed_text}}</div>
+        <div>
+            <a>
+                <button class="login_button" type="button" (click)="print_login_pass(logid.value,password.value)">Login</button>
+            </a>
+        </div>
+        <div class="para">Or</div>
+        <div class="para">Sign In with</div>
+        <div class="google_but">
+            <button [routerLink]=router_link_for_google class="google" type="button" (click)="loginWithGoogle()">
+                <span>
+                    <img class="google_logo" src="../../../../assets/img_leave/google-symbol.svg" alt="Google logog" width="19px" height="19px">
+                </span>
+                <span class="google_text">Google</span>
+            </button>
+        </div>
+        <button class="remote_logo" type="button">
+            <img src="../../../../assets/img_leave/Remotestate bottom logo.svg" alt="Remotestate Logo" width="175px" height="25px">
+        </button>
+    </div>
+</div>

@@ -1,0 +1,38 @@
+<div class="standup_page">
+    <div class="standup_page_header">
+        <div class="back">
+            <span class="back_arrow" routerLink="/remotestate/login/screen">
+                <img (click)="delete_standup_id()" src="../../../../assets/img_leave/Icon ionic-arrow-round-back.svg" alt="back">
+            </span>
+            <span class="leave_app">Standup</span>
+        </div>
+        <div class="not_log_button">
+            <button class="not_button" type="button">
+                <img src="../../../../assets/img_leave/notification icon.svg" alt="notification" width="16px" height="20px">
+            </button>
+            <button class="log_button" type="button" routerLink="/remotestate/login">
+                <img src="../../../../assets/img_leave/logout.svg" alt="logout" width="21px" height="21px">
+            </button>
+        </div>
+    </div>
+    <div class="did_yes">
+        <div class="text">What I Did Yesterday ?</div>
+        <textarea #didyes class="box" autosize>{{did_yes}}</textarea>
+    </div>
+    <div class="did_today">
+        <div class="text">What I Will Do Today ?</div>
+        <textarea #dotoday class="box" autosize>{{do_today}}</textarea>
+    </div>
+    <div class="button">
+        <button (click)="submit_form(didyes,dotoday)" type="button" class="subm_button">Submit</button>
+    </div>
+    <div class="pre_standup_his">
+        <div class="his_logo">
+            <img class="img" routerLink="/remotestate/standup/previous" src="../../../../assets/img_leave/History icon.svg" alt="history Icon" width="22px" height="22px">
+            Previous Standup
+        </div>
+        <div class="celender">
+            <img src="../../../../assets/img_leave/Icon awesome-calendar-alt.svg" alt="celender" width="24px" height="27px">
+        </div>
+    </div>
+</div>

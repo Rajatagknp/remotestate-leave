@@ -1,0 +1,304 @@
+.login_page{
+    opacity: 1;
+    text-align: center;
+    .login_img{
+        position: relative;
+        margin-bottom: 37px;
+        .login_img_2{
+            position: absolute;
+            margin: 10%;
+            width: 80%;
+        }
+        .login_img_1{
+            width: 100%;
+        }
+    }
+    .login_body{
+        .loginid,.password{
+            outline-width: 0;
+            width: 230px;
+            height: 43px;
+            border: 2px solid #307FE2;
+            border-radius: 12px;
+        }
+        .required{
+            color: red;
+            font-size: smaller;
+        }
+        .login_button{
+            margin-top: 13px;
+            margin-bottom: 20px;
+            font: normal normal 900 17px/27px Lato;
+            letter-spacing: 0.77px;
+            color: #FFFFFF;
+            background: #307FE2 0% 0% no-repeat padding-box;
+            box-shadow: 5px 5px 10px #307FE24D;
+            border-radius: 8px;
+            border: 0ch;
+            padding: 11px 34px 11px 34px;
+        }
+        .para{
+            font: normal normal normal 17px/27px Lato;
+            letter-spacing: 0.77px;
+            color: #6C6C6C;
+        }
+        .google_but{
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+        }
+        .google{
+            display: flex;
+            flex-direction: row;
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            box-shadow: 5px 5px 10px #307FE24F;
+            border: 1px solid #307FE2;
+            border-radius: 8px;
+            padding: 7.5px 6.99px 6.49px 10px;
+            .google_text{
+                margin-left: 5px;
+                font: normal normal 900 17px/17px Lato;
+                letter-spacing: 0.77px;
+                color: #307FE2;
+            }
+        }
+        .remote_logo{
+            margin-top: 94px;
+            border: 0ch;
+            background-color: white;
+        }
+    }
+}
+
+.login_screen{
+    .background_img{
+        position:absolute;
+        top: 178px;
+        width: 98.1vw;
+        height: 648px;
+        background: transparent url('../../../../assets/img_leave/Background\ graphics\ 1.svg') 0% 0% repeat padding-box;
+    }
+    .header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        background-color: #307FE2;
+        .remote_logo{
+            padding: 18px 0px 18px 13.7px;
+        }
+        .logo{
+            display: flex;
+            flex-direction: row;
+            .logout{
+                padding-left: 30px;
+                padding-right: 10px;
+            }
+        }
+    }
+    .body_one{
+        font: normal normal normal 16px/25px Lato;
+        letter-spacing: 0.72px;
+        color: #6C6C6C;
+        background: #EEEEEE 0% 0% no-repeat padding-box;
+        border-radius: 0px 0px 30px 30px;
+        .name_text,.mail_ser{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-left: 14px;
+            margin-right: 15px;
+        }
+        .name_text{
+            .name_box_one{
+                .phone_num{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    .img{
+                        margin-right: 8px;
+                    }
+                }
+            }
+        }
+        .mail_ser{
+            .mail_id{
+                margin-bottom: 10px;
+                display: flex;
+                align-items: center;
+                .img{
+                    margin-top: 5px;
+                    margin-right: 8px;
+                }
+            }
+        }
+        .name_text{
+            padding-top: 21px;
+            .phone_num{
+                padding-top: 23px;
+                display: flex;
+                flex-direction: row;
+            }
+            .name{
+                font: normal normal 900 24px/38px Lato;
+                letter-spacing: 1.08px;
+                color: #307FE2;
+            }
+        }
+    }
+    .body_two{
+        background-color: #F0F0F0;
+        margin: 21px 15px 0px 15px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border-radius: 10px;
+        .img{
+            padding: 18.56px 15.47px 18.56px 9.56px;
+        }
+        .text{
+            margin-top: 30px;
+            margin-right: 5px;
+            width: 200px;
+            font: normal normal 900 14px/21px Lato;
+            letter-spacing: 0.63px;
+            color: #6C6C6C
+        }
+    }
+    .body_three{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 18px 15px 0px 15px;
+        background-color: #F5F9FF;
+        border: 1px solid #307FE2;
+        box-shadow: 4px 3px 6px #307FE233;
+        border-radius: 10px;
+        .text{
+            margin: 23px 0px 0px 9.11px;
+            display: flex;
+            flex-direction: row;
+            .logo,.logo_text,.logo_date{
+                display: flex;
+                flex-direction: column;
+                .logo0{
+                    margin-top: 15px;
+                    margin-bottom: 20px;
+                }
+                .logo1{
+                    margin-left: 10px;
+                    margin-right: 40px;
+                    margin-bottom: 20px;
+                    font: normal normal normal 15px/20px Lato;
+                    letter-spacing: 0.68px;
+                    color: #6C6C6C;
+                }
+                .logo2{
+                    margin-bottom: 15px;
+                    font: normal normal 900 21px/21px Lato;
+                    letter-spacing: 0.94px;
+                    color: #FF6F01;
+                    .small{
+                        font: normal normal 900 13px/17px Lato;
+                        letter-spacing: 0.58px;
+                    }
+                }
+            }
+        }
+        .img{
+            padding-top: 28px;
+            padding-right: 21px;
+            .leave_text{
+                display: flex;
+                justify-content: center;
+                font: normal normal normal 20px/39px Lato;
+                letter-spacing: 0.9px;
+                color: #307FE2;
+            }
+        }
+    }
+    .body_four{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 29px 15px 0px 15px;
+        background-color: #F5F9FF ;
+        box-shadow: 4px 3px 6px #307FE233;
+        border: 1px solid #307FE2;
+        border-radius: 10px;
+        .text{
+            .four_header{
+                display: flex;
+                flex-direction: row;
+                padding: 19px 0px 0px 10.11px;
+                margin-bottom: 20px;
+                .date{
+                    margin-left: 13.11px;
+                    font: normal normal normal 16px/20px Lato;
+                    letter-spacing: 0.72px;
+                    color: #307FE2;
+                }
+            }
+            .four_body{
+                display: flex;
+                flex-direction: row;
+                padding-left: 10px;
+                font: normal normal normal 16px/26px Lato;
+                letter-spacing: 0.72px;
+                color: #6C6C6C;
+                .hor_line{
+                    margin-top: 2.2px;
+                    margin-right: 6px;
+                    width: 3px;
+                    height: 22px;
+                    background-color: #6C6C6C57;
+                }
+                .text{
+                    padding-top: 1.2px;
+                    .text_body{
+                        display: flex;
+                        flex-direction: row;
+                        .black_dot{
+                            margin: 10px 5px 0px 0px;
+                            width: 6px;
+                            height: 6px;
+                            border-radius: 50%;
+                            background: #6C6C6C
+                        }
+                    }
+                }
+            }
+        }
+        .four_img{
+            padding-top: 19px;
+            padding-right: 20.19px;
+            .standup{
+                display: flex;
+                justify-content: center;
+                font: normal normal normal 20px/39px Lato;
+                letter-spacing: 0.9px;
+                color: #307FE2;
+            }
+        }
+    }
+    .body_five{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 26px 15px 10px 15px;;
+        background-color: #F5F9FF;
+        border: 1px solid #307FE2;
+        border-radius: 7px;
+        .five_img{
+            padding: 21.26px 17px 20.26px 0px;
+        }
+        .five_text{
+            padding-left: 6px;
+            padding-top: 24px;
+            font: normal normal normal 18px/25px Lato;
+            letter-spacing: 0.81px;
+            color: #307FE2;
+        }
+    }
+}

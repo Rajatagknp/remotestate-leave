@@ -1,0 +1,328 @@
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+[contenteditable] {
+    outline: 0px solid transparent;
+}
+
+.leave_page{
+    opacity: 1;
+    background-color: #F5F9FF ;
+    .leave_page_header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: #307FE2;
+        font: normal normal 900 16px/26px Lato;
+        letter-spacing: 0.72px;
+        color: #FFFFFF;
+        .back{
+            padding: 18px 0px 18px 14px;
+            display: flex;
+            flex-direction: row;
+            .leave_app{
+                padding-left: 21.76px;
+            }
+        }
+        .not_log_button{
+            padding: 18px 16px 15.9px 0px;
+            .not_button,.log_button{
+                background-color: #307FE2;
+                border: 0ch;
+            }
+            .not_button{
+                margin-right: 30.35px;
+            }
+        }
+    }
+    .leave_data{
+        margin: 22px 15px 0px 15px;
+        background-color: #FFFFFF;
+        border: 1px solid #307FE2;
+        border-radius: 11px;
+        box-shadow: 4px 3px 6px #307FE233;
+        .sick_leave,.casual_leave,.annual_leave{
+            margin: 20px 13px 0px 13px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            background-color: #F5F9FF;
+            .icon_text{
+                display: flex;
+                flex-direction: row;
+                .img{
+                    padding: 8.52px 14px 7.38px 10.11px;
+                }
+                .text{
+                    padding: 19px 0px 21px 14px;
+                    font: normal normal 900 16px/22px Lato;
+                    letter-spacing: 0.72px;
+                    color: #6C6C6C;
+                }
+            }
+            .date{
+                padding: 14px 13px 0px 0px;
+                font: normal normal 900 25px/32px Lato;
+                letter-spacing: 1.13px;
+                color: #FF6F01;
+                .small{
+                    font: normal normal 900 16px/32px Lato;
+                    letter-spacing: 0.72px;
+                }
+            }
+        }
+        .casual_leave{
+            margin: 10px 13px 00px 13px;
+        }
+        .annual_leave{
+            margin: 10px 13px 20px 13px;
+        }
+    }
+    .apply_button,.recent{
+        margin-top: 18px;
+        display: flex;
+        justify-content: center;
+        font: normal normal 900 14px/36px Lato;
+        letter-spacing: 0.63px;
+        color: #307FE2;
+        .button{
+            background-color: #307FE2;
+            border: 0ch;
+            border-radius: 8px;
+            padding: 16px 44px 15px 47px;
+            font: normal normal 900 16px/26px Lato;
+            letter-spacing: 0.72px;
+            color: #FFFFFF;
+        }
+    }
+    .leave_write,.leave_write_two{
+        margin: 0px 15px 0px 15px;
+        .write_header{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid #307FE2;
+            border-radius: 13px 13px 0px 0px;
+            background-color: #E2EEFD;
+            padding: 11.1px 11.78px 10.1px 7px;
+            font: normal normal 900 18px/36px Lato;
+            letter-spacing: 0.81px;
+            color: #307FE2;
+            .date{
+                display: flex;
+                flex-direction: row;
+                border: 0ch;
+                .write_date{
+                    padding-left: 3px;
+                    font: normal normal normal 14px/28px Lato;
+                    letter-spacing: 0.63px;
+                }
+            }
+            .edit_leave{
+                border: 0px;
+                background-color: #E2EEFD;
+            }
+        }
+        .write_body{
+            min-height: 125px;
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            border: 1px solid #307FE2;
+            font: normal normal normal 18px/36px Lato;
+            letter-spacing: 0.81px;
+            color: #6C6C6C;
+            .reason{
+                padding-top: 19px;
+                padding-left: 10px;
+            }
+        }
+        .edit_leave_body{
+            position: relative;
+            top: -170px;
+            left: calc(100vw - 285px);
+            width: 221px;
+            height: 139px;
+            background-color: #E2EEFD ;
+            border: 1px solid #307FE2;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            .close_leave{
+                display: flex;
+                justify-content: flex-end;
+                padding: 12.38px 12.62px 23.34px 0px;
+                .close_leave_but{
+                    border: 0ch;
+                    background-color: #E2EEFD;
+                }
+            }
+            .modify,.cancle{
+                padding-left: 12px;
+                padding-bottom: 13px;
+            }
+        }
+    }
+    .leave_write_two{
+        margin-top: 20px;
+    }
+}
+
+.leaveapply_page{
+    opacity: 1;
+    .leaveapply_page_header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: #307FE2;
+        font: normal normal 900 16px/26px Lato;
+        letter-spacing: 0.72px;
+        color: #FFFFFF;
+        .back{
+            padding: 18px 0px 18px 14px;
+            display: flex;
+            flex-direction: row;
+            .leave_app{
+                padding-left: 21.76px;
+            }
+        }
+        .not_log_button{
+            padding: 18px 16px 15.9px 0px;
+            .not_button,.log_button{
+                background-color: #307FE2;
+                border: 0ch;
+            }
+            .not_button{
+                margin-right: 30.35px;
+            }
+        }
+    }
+    .leaveapply_page_body{
+        background-color: #F5F9FF;
+        .date,.date_reson{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-right: 15px;
+            .date_text{
+                width: 120px;
+                margin-top: 34px;
+                margin-left: 15px;
+                margin-right: 16px;
+                font: normal normal 900 18px/26px Lato;
+                letter-spacing: 0.81px;
+                color: #307FE2;
+            }
+            .date_date{
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+                background-color: #E2EEFD;
+                border: 1px solid #307FE2;
+                border-radius: 8px;
+                margin-top: 22px;
+                width: calc(100vw - 160px);
+                .style_date{
+                    color: red;
+                    font-size: smaller;
+                }
+                .cele_img{
+                    padding-right: 9.74px
+                }
+                .cel_text{
+                    width: calc(100vw - 200px);
+                    margin: 0px 0px 0px 11px;
+                    border: 0px;
+                    border-radius: 8px;
+                    background-color: #E2EEFD;
+                    font: normal normal normal 14px/14px Lato;
+                    letter-spacing: 0.63px;
+                    color: #6C6C6C;
+                }
+            }
+        }
+    }
+    .leaveapply_page_footer{
+        display: flex;
+        justify-content: center;
+        padding-top: 33px;
+        background-color: #F5F9FF;
+        .sub_button{
+            padding: 16px 32px 15px 32px;
+            background: #307FE2 0% 0% no-repeat padding-box;
+            border-radius: 8px;
+            border: 0px;
+            font: normal normal 900 16px/26px Lato;
+            letter-spacing: 0.72px;
+            color: #FFFFFF;
+        }
+    }
+}
+
+.leaveprocessing_page{
+    opacity: 1;
+    .leaveprocessing_page_header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: #307FE2;
+        font: normal normal 900 16px/26px Lato;
+        letter-spacing: 0.72px;
+        color: #FFFFFF;
+        .back{
+            padding: 18px 0px 18px 14px;
+            display: flex;
+            flex-direction: row;
+            .leave_app{
+                padding-left: 21.76px;
+            }
+        }
+        .not_log_button{
+            padding: 18px 16px 15.9px 0px;
+            .not_button,.log_button{
+                background-color: #307FE2;
+                border: 0ch;
+            }
+            .not_button{
+                margin-right: 30.35px;
+            }
+        }
+    }
+    .processing_page_body{
+        background-color: #FFFFFF;
+        border: 1px solid #707070;
+        opacity: 1;
+        backdrop-filter: blur(26px);
+        -webkit-backdrop-filter: blur(26px);
+        .complete_img{
+            margin-top: 139px;
+            display: flex;
+            justify-content: center;
+        }
+        .processing_page_body_header{
+            background-color: #E2EEFD;
+            border: 1px solid #307FE2;
+            border-radius: 10px;
+            margin: 52px 32px 250px 32px;
+            .body_header_text{
+                text-align: center;
+                margin: 17px 30px 18px 29px;
+                font: normal normal normal 18px/21px Lato;
+                letter-spacing: 1.8px;
+                color: #307FE2;
+            }
+            .cont{
+                display: flex;
+                justify-content: center;
+                margin-bottom: 22px;
+                .cont_button{
+                    padding: 7px 30px 7px 30px;
+                    font: normal normal normal 18px/21px Lato;
+                    letter-spacing: 1.8px;
+                    color: #FFFFFF;
+                    background-color: #307FE2;
+                    border: 1px solid #307FE2;
+                    border-radius: 8px;
+                }
+            }
+        }
+    }
+}

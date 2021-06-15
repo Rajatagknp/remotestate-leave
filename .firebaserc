@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "remote-state-leave": {
+      "hosting": {
+        "my-app": [
+          "remote-state-leave"
+        ]
+      }
+    }
+  }
+}

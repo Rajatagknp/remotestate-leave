@@ -1,0 +1,31 @@
+<div class="leaveprocessing_page">
+    <div class="leaveprocessing_page_header">
+        <div class="back">
+            <span class="back_arrow" routerLink="/remotestate/leave/apply">
+                <img back_arrow src="../../../../assets/img_leave/Icon ionic-arrow-round-back.svg" alt="back">
+            </span>
+            <span class="leave_app">Leave Application</span>
+        </div>
+        <div class="not_log_button">
+            <button class="not_button" type="button">
+                <img src="../../../../assets/img_leave/notification icon.svg" alt="notification" width="16px" height="20px">
+            </button>
+            <button class="log_button" type="button" routerLink="/remotestate/login">
+                <img src="../../../../assets/img_leave/logout.svg" alt="logout" width="21px" height="21px">
+            </button>
+        </div>
+    </div>
+    <div class="processing_page_body">
+        <div class="complete_img">
+            <img [src]=img_src alt="Leave Complete" width="111px" height="111px">
+        </div>
+        <div class="processing_page_body_header">
+            <div class="body_header_text">
+                Your leave Application has been submitted <span style="font-weight: 900;">successfully</span>
+            </div>
+            <div class="cont">
+                <button (click)="submit_form()" class="cont_button" type="button" routerLink="/remotestate/login/screen">Continue</button>
+            </div>
+        </div>
+    </div>
+</div>
